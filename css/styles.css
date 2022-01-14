@@ -1,8 +1,18 @@
 
 .home{
-    background-image: url('/images/food-photographer-david-fedulov-Xt84tIHbjRY-unsplash.jpg');
+    /* background-image: url('/images/food-photographer-david-fedulov-Xt84tIHbjRY-unsplash.jpg'); 
     /* background-attachment: fixed; */
     background-size: cover;
     background-repeat: no-repeat;
-    height: 550px;
+} 
+.row{
+    margin:0px 150px 0px 10px;
+    justify-content: space-around;
+
+}
+.card{
+    width: 300px;
+    border: 2px solid black;
+    height: 300px;
+    border-radius: 19px;
 }
