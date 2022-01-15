@@ -1,7 +1,9 @@
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        color: rgb(254,80,0);
-    
+    color: rgb(254,80,0);   
+}
+nav{
+    background-color:rgb(255, 68, 0)
 }
 .home{
     /* background-image: url('/images/food-photographer-david-fedulov-Xt84tIHbjRY-unsplash.jpg'); */
@@ -35,10 +37,25 @@ input[type="button"]{
 }
 .card{
     width: 300px;
-    border: 1px solid black;
+    border:none;
+    box-shadow: .1px 2px 5px rgb(254,80,0);
     height: 300px;
     border-radius: 19px;
 }
+.about{
+    text-align: center;
+}
+.varieties{
+    text-align: center;
+    background-color:no;
+}
+img:hover{
+    transform: scale(1.2);
+}
+.orde{
+    text-align: center;
+}
+
 #orders{
     display: none;
 }
