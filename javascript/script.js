@@ -19,8 +19,18 @@ var sizePrice = [400, 800, 1200];
 
 
 $(document).ready(function() {
-    $('form#myForm').submit(function(e){
+    $('form#myForm').submit(function(event){
+        event.preventDefault();
+        var pizzaFlavor = $('#flavor').val();
+        var pizzaSize = $('#size').val();
+        var pizzaCrust = $('#crust').val();
+        var pizzaTopping = $('#topping').val();
 
-    })
 
-})
+        newOrder = new Order(pizzaFlavor, pizzaSize, pizzaCrust, pizzaTopping);
+        // newTotal = new Total(price);
+
+        alert(newOrder.fullOrder());
+    });
+
+});
