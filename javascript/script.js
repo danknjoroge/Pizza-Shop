@@ -1,3 +1,23 @@
+function validateForm() {
+    if( document.myForm.flavor.value == "") {
+       alert( "Please select the preferred Pizza flavor." );
+       document.myForm.date.focus() ;
+       return false;
+    } else if(document.myForm.size.value == "") {
+        alert("Please select the size you want to order.");
+        return false;
+    }else if(document.myForm.crust.value == "") {
+        alert("Please select yout preferred crust");
+        return false;
+    } 
+    else if(document.myForm.topping.value == "") {
+        alert("Please select yout preferred topping");
+        return false;
+    }    
+    else{
+      return true ;
+    } 
+}
 
 function Order(flavor, size, crust, topping){
     this.flavor = flavor;
@@ -25,12 +45,15 @@ $(document).ready(function() {
         var pizzaSize = $('#size').val();
         var pizzaCrust = $('#crust').val();
         var pizzaTopping = $('#topping').val();
+        var price = sizePrice[pizzaSize-1];
 
 
         newOrder = new Order(pizzaFlavor, pizzaSize, pizzaCrust, pizzaTopping);
-        // newTotal = new Total(price);
+        newTotal = new Total(price);
 
-        alert(newOrder.fullOrder());
+        $("#placedOrder").html("You Ordered " + newOrder.size + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.finalTotal());
     });
 
 });
+
+
