@@ -9,7 +9,7 @@
     <title>Pizza Shop</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark p-2 navbar-fixed-top">
+    <nav class="navbar navbar-expand-sm bg-dark p-2 fixed-top">
         <div class="navbar-nav m-auto navbar-fixed-top">
             <a href="#about" class="nav-item nav-link">Home</a>
             <a href="#about" class="nav-item nav-link">About</a>
@@ -90,38 +90,56 @@
         <h1>Order Here</h1>
         <form id="myForm" name="myForm" action ="" class="form-control p-5" onsubmit="validateForm()">
             <div class="input-group mb-3">
-                <label class="input-group-text" for="movie">Name of movie</label>
-                <select class="form-select" id="movie">
-                  <option value="">Choose...</option>
-                  <option value="1">Black panther</option>
-                  <option value="2">Money heist</option>
-                  <option value="3">Wonder Women</option>
+                <label class="input-group-text" for="movie">Pizza Flavor</label>
+                <select class="form-select" id="pizza">
+                  <option value="">Select your favorite flavor</option>...</option>
+                  <option value="pepperoni">Pepperoni</option>
+                  <option value="veggie">Veggie</option>
+                  <option value="margherita">Margherita</option>
                 </select>
               </div>
     
               <div class="input-group mb-3">
-                <label class="input-group-text" for="inputGroupSelect01">Time of the day</label>
-                <select class="form-select" id="time">
-                  <option value="">Choose...</option>
-                  <option value="1">Morning</option>
-                  <option value="2">Noon</option>
-                  <option value="3">Evening</option>
+                <label class="input-group-text" for="inputGroupSelect01">Select Size</label>
+                <select class="form-select" id="size">
+                  <option value="">Select pizza size here...</option>
+                  <option value="small">Small @ Ksh. 400</option>
+                  <option value="medium">Medium @ Ksh. 800</option>
+                  <option value="large">Large @ Ksh. 1200</option>
                 </select>
               </div>
     
               <div class="input-group mb-3">
-                <label class="input-group-text" for="inputGroupSelect01">Select Your Age</label>
-                <select class="form-select" id="age">
-                  <option value="">Choose...</option>
-                  <option value="1">15</option>
-                  <option value="2">20</option>
-                  <option value="3">30</option>
+                <label class="input-group-text" for="inputGroupSelect01">Select Crust</label>
+                <select class="form-select" id="crust">
+                  <option value="">Select your favorite Crust here...</option>
+                  <option value="crispy">Crispy</option>
+                  <option value="stuffed">Stuffed</option>
+                  <option value="glutten">Gluten free</option>
                 </select>
               </div>
-              <input type="submit">  
+              <input type="submit" value="Checkout">  
         </form>
-
     </div>
+    <div class="container" id="orders">
+        <h3>You Placed the following orders:</h3>
+        <p></p>
+    </div>
+   
+    <form action="">
+        <div class="container">
+            <input type="submit" value="Add Pizza">
+            <input type="submit" value="Delivery" id="">
+        </div>
+        <div class="form-group container">
+            <p>Your delivery cost is Ksh. 150</p>
+            <input type="text" id="name" class="form-control mb-3" placeholder="Name">
+            <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number">
+            <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery">
+            <input type="button" value="Place Order">
+        </div>
+
+    </form>
     
 
 
