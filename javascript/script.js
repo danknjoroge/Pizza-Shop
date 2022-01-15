@@ -33,6 +33,9 @@ Order.prototype.fullOrder = function(){
 function Total(price){
     this.price = price;
 }
+Total.prototype.pizzaTotal= function(){
+    return this.price;
+}
 Total.prototype.finalTotal = function(){
     return this.price + 150.
 }
@@ -53,11 +56,11 @@ $(document).ready(function() {
         newTotal = new Total(price);
 
         if (pizzaSize == 1) {
-            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.finalTotal());
+            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.pizzaTotal());
         }else if(pizzaSize == 2) {
-            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.finalTotal());
+            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.pizzaTotal());
         }else if(pizzaSize==3) {
-            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.finalTotal());
+            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.pizzaTotal());
         }else{
             return false;
         }
@@ -69,7 +72,7 @@ $(document).ready(function() {
 
     $('#add').click(function(e) {
         e.preventDefault();
-        $("#placedOrder").append("You Ordered " + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.finalTotal());
+        $("#placedOrder").append("You Ordered " + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.pizzaTotal());
         document.getElementById("myForm").reset();
     })
     $('form#deliveryForm').submit(function(e) {
@@ -77,11 +80,18 @@ $(document).ready(function() {
         var name = $('#name').val();
         var phone = $('#phone').val();
         var location = $('#location').val();
+        alert("Hello, " + name + ".Your order has been received. Your Pizza will be delivered to " + location + " in the next 30 to 35 minutes maximum. And the Total Amount to pay is: KSH." + newTotal.finalTotal());
         document.getElementById("myForm").reset();
 
-        alert("Hello, " + name + ". Your Pizza will be delivered to " + location + " in the next 35 minutes.");
-
     });
+   $('#checkout').click(function(e) {
+       $('#orders').show();
+       $('.del').show();
+   })
+   $('#deliver').click(function(e) {
+       e.preventDefault();
+       $('#deliveryForm').show();
+   })
 
 });
 

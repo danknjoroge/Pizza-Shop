@@ -21,11 +21,11 @@
         </div>   
     </nav>
     <div class="container-fluid home" 
-    style="background-image: url('images/food-photographer-david-fedulov-Xt84tIHbjRY-unsplash.jpg'); background-repeat: no-repeat;
+    style="background-image: url('images/imag.png'); background-repeat: no-repeat;
     background-size: cover; height: 100vh";>
         <div class="container p-5">
-            <h1>Welcome To Pizza Shop. <h1>
-            <h1> Where you order at your comfort</h1>
+            <h1 class="first">Welcome To Pizza Shop. <h1>
+            <h1 class="p-4"> Where you order at your comfort</h1>
             <input type="button" value="Order Now">
         </div>   
     </div>
@@ -130,16 +130,16 @@
                   <option value="glutten">Gluten free</option>
                 </select>
               </div>
-              <input type="submit" value="Checkout">  
+              <input type="submit" id="checkout" value="Checkout">  
         </form>
     </div>
     <div class="container" id="orders">
         <h3>You Placed the following orders:</h3>
         <p id="placedOrder"> </p>
     </div>
-    <div class="container">
+    <div class="container del">
         <input type="submit" id="add" value="Add Pizza" >
-        <input type="submit" value="Want Delivery?" id="">
+        <input type="submit" value="Want Delivery?" id="deliver">
     </div>
    
     <form action="" id="deliveryForm" onsubmit="deliveryValidate() ">
