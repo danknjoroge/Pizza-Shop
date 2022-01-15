@@ -12,6 +12,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-sm bg-warning p-2 fixed-top">
+        Pizza Eat
         <div class="navbar-nav m-auto navbar-fixed-top">
             <a href="#about" class="nav-item nav-link">Home</a>
             <a href="#about" class="nav-item nav-link">About</a>
@@ -92,7 +93,7 @@
         <h1>Order Here</h1>
         <form id="myForm" name="myForm" action ="" class="form-control p-5" onsubmit="validateForm()">
             <div class="input-group mb-3">
-                <label class="input-group-text" for="movie">Pizza Flavor</label>
+                <label class="input-group-text" for="pizza">Pizza Flavor</label>
                 <select class="form-select" id="pizza">
                   <option value="">Select your favorite flavor</option>...</option>
                   <option value="pepperoni">Pepperoni</option>
@@ -120,12 +121,21 @@
                   <option value="glutten">Gluten free</option>
                 </select>
               </div>
+              <div class="input-group mb-3">
+                <label class="input-group-text" for="inputGroupSelect01">Select Topping</label>
+                <select class="form-select" id="topping">
+                  <option value="">Select your favorite topping here...</option>
+                  <option value="crispy">Crispy</option>
+                  <option value="stuffed">Stuffed</option>
+                  <option value="glutten">Gluten free</option>
+                </select>
+              </div>
               <input type="submit" value="Checkout">  
         </form>
     </div>
     <div class="container" id="orders">
         <h3>You Placed the following orders:</h3>
-        <p></p>
+        <p id="placedOrder"> </p>
     </div>
    
     <form action="">
@@ -143,7 +153,7 @@
 
     </form>
 
-    <div class="container-fluid bg-default" id="contact">
+    <div class="container bg-default" id="contact">
         <div class="controls-top "> 
             <h2>Contact Us</h2>
           </div>
@@ -175,7 +185,7 @@
           <div class="col-md-1"></div>
         </div>
     
-
+    </div>
     <footer class="bg-warning p-2 mt-2">
         <p>copyrights &copy; 2022 Daniel Njoroge. All rights reserved</p>
         <!-- <i class="fa fa-facebook" style="font-size:48px;"></i>
