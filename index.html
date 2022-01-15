@@ -106,9 +106,9 @@
                 <label class="input-group-text" for="inputGroupSelect01">Select Size</label>
                 <select class="form-select" id="size">
                   <option value="">Select pizza size here...</option>
-                  <option value="small">Small @ Ksh. 400</option>
-                  <option value="medium">Medium @ Ksh. 800</option>
-                  <option value="large">Large @ Ksh. 1200</option>
+                  <option value="1">Small @ Ksh. 400</option>
+                  <option value="2">Medium @ Ksh. 800</option>
+                  <option value="3">Large @ Ksh. 1200</option>
                 </select>
               </div>
     
@@ -137,18 +137,18 @@
         <h3>You Placed the following orders:</h3>
         <p id="placedOrder"> </p>
     </div>
+    <div class="container">
+        <input type="submit" id="add" value="Add Pizza" >
+        <input type="submit" value="Want Delivery?" id="">
+    </div>
    
-    <form action="">
-        <div class="container">
-            <input type="submit" value="Add Pizza">
-            <input type="submit" value="Delivery" id="">
-        </div>
+    <form action="" id="deliveryForm" onsubmit="deliveryValidate() ">
         <div class="form-group container">
             <p>Your delivery cost is Ksh. 150</p>
-            <input type="text" id="name" class="form-control mb-3" placeholder="Name">
-            <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number">
-            <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery">
-            <input type="button" value="Place Order">
+            <input type="text" id="name" class="form-control mb-3" placeholder="Name" required>
+            <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number" required>
+            <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery" required>
+            <input type="submit" id="place" class="place" value="Place Order">
         </div>
 
     </form>

@@ -19,6 +19,7 @@ function validateForm() {
     } 
 }
 
+
 function Order(flavor, size, crust, topping){
     this.flavor = flavor;
     this.size = size;
@@ -42,7 +43,7 @@ $(document).ready(function() {
     $('form#myForm').submit(function(event){
         event.preventDefault();
         var pizzaFlavor = $('#flavor').val();
-        var pizzaSize = $('#size').val();
+        var pizzaSize = parseInt($('#size').val());
         var pizzaCrust = $('#crust').val();
         var pizzaTopping = $('#topping').val();
         var price = sizePrice[pizzaSize-1];
@@ -51,7 +52,35 @@ $(document).ready(function() {
         newOrder = new Order(pizzaFlavor, pizzaSize, pizzaCrust, pizzaTopping);
         newTotal = new Total(price);
 
-        $("#placedOrder").html("You Ordered " + newOrder.size + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.finalTotal());
+        if (pizzaSize == 1) {
+            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.finalTotal());
+        }else if(pizzaSize == 2) {
+            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.finalTotal());
+        }else if(pizzaSize==3) {
+            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.finalTotal());
+        }else{
+            return false;
+        }
+
+        // $("#placedOrder").html("You Ordered " + newOrder.size + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.finalTotal());
+        document.getElementById("myForm").reset();
+
+    });
+
+    $('#add').click(function(e) {
+        e.preventDefault();
+        $("#placedOrder").append("You Ordered " + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.finalTotal());
+        document.getElementById("myForm").reset();
+    })
+    $('form#deliveryForm').submit(function(e) {
+        e.preventDefault();
+        var name = $('#name').val();
+        var phone = $('#phone').val();
+        var location = $('#location').val();
+        document.getElementById("myForm").reset();
+
+        alert("Hello, " + name + ". Your Pizza will be delivered to " + location + " in the next 35 minutes.");
+
     });
 
 });
