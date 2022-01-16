@@ -17,7 +17,7 @@ Its a website that allows one to be able to access different Pizza flavours and 
 * Open the project using a web browser of your choice, preferably Google Chrome or if you have installed Liveserver in Visual Studio code, you can go live from there.
 * Alternatively, you can use the live link provided under the live-link section which only requires network connection and computer with any browser but preferrably google chrome.
 ## Live link
-     https://danknjoroge.github.io// 
+     hhttps://danknjoroge.github.io/Pizza-Shop/ 
      
 ## Known Bugs
 There are no known bugs as per the time of publication. 
