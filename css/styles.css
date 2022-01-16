@@ -46,18 +46,38 @@ input[type="button"]{
 .about{
     text-align: center;
     background-color: rgb(254,80,0);
+    /* color: white; */
 
+}
+.about p,h1{
+    background-color:transparent;
+    color: white;
+    font-weight:normal;
+}
+.about>.abt>p{
+    font-size: medium;
+    font-style: italic;
+}
+.about>.abt>h1{
+    color:rgb(33,37,41);
+    font-weight: bold;
 }
 .varieties{
     text-align: center;
-    background-color:no;
+    background-color:transparent;
 }
 img:hover{
     transform: scale(1.2);
 }
+
 .orde{
     text-align: center;
-    /* width: 855px; */
+}
+.orde h1,p{
+    color: white;
+    font-size:35px;
+    font-weight: bold;
+    background-color:rgb(33,37,41);
 }
 .align{
     text-align: center;
@@ -73,6 +93,7 @@ img:hover{
 #deliveryForm{
     display: none;
     width:756px;
+    background-color: rgb(33,37,41);
 }
 input[type="submit"]{
     color: white;
@@ -92,7 +113,17 @@ form{
 }
 footer p {
     color: #fff;
+    font-size:25px;
+    font-weight: bold;
 }
 .fa{
     color: #fff;
+}
+#contact p{
+    color: #fff;
+    font-weight: bold;
+    font-size: 19px;
+}
+#contact h2{
+    font-weight: bold;
 }

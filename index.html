@@ -14,10 +14,10 @@
     <nav class="navbar navbar-expand-sm bg-dark p-2 fixed-top">
         Pizza Eat
         <div class="navbar-nav m-auto navbar-fixed-top">
-            <a href="#about" class="nav-item nav-link">Home</a>
+            <a href="#" class="nav-item nav-link">Home</a>
             <a href="#about" class="nav-item nav-link">About</a>
-            <a href="#home" class="nav-item nav-link">Contact</a>
-            <a href="#intouch" class="nav-item nav-link gy">Order Now</a>
+            <a href="#contact" class="nav-item nav-link">Contact</a>
+            <a href="#ordee" class="nav-item nav-link gy">Order Now</a>
         </div>   
     </nav>
     <div class="container-fluid home" 
@@ -26,19 +26,36 @@
         <div class="container p-5">
             <h1 class="first">Welcome To Pizza Eat Shop. <h1>
             <h1 class="p-4"> Where you order at your comfort</h1>
-            <input type="button" value="Order Now">
+            <a href="#ordee"><input type="button" value="Order Now"></a>
         </div>   
     </div>
 
-    <div class="container-fluid about">
-        <h1>About us</h1>
-        <div class="container">
-            <p>Hello</p>
+    <div class="container-fluid about p-5" id="about">
+        <h1 style="font-weight:bold;">About us</h1>
+        <div class="container abt">
+            <h1>Who We Are And What We Do.</h1>
+            <p>Pizza Eat Shop is a shop that specializes in the making and selling of pizza within the country. Our staff are trained to prepare all pizza
+                flavours of all different sizes ranging from small to large. We are located at Two Rivers mall, Kiambu
+            </p>
+            <h1>Why Pizza?</h1>
+            <p>Pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of 
+                olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, 
+                in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot.
+            </p>
+            <h1>History of Margherita Flavor!</h1>
+            <p>One of the simplest and most traditional pizzas is the Margherita, which is topped with tomatoes or tomato sauce, 
+                mozzarella, and basil. Popular legend relates that it was named for Queen Margherita, wife of Umberto I, who 
+                was said to have liked its mild freshflavour and to have also noted that its topping colours—green, white,
+                and red—were those of the Italian flag.
+            </p>    
+ 
         </div>
+        
     </div>
 
     <div class="container-fluid varieties">
-        <h1>Varieties</h1>
+        <h1 class="pt-5" style="color: rgb(254,80,0); font-weight: bold; font: size 25px;">Our Pizza Varieties flavors
+        </h1>
         <div class="row pt-3">
             <div class="col-md-2 md">
                 <div class="card">
@@ -94,11 +111,11 @@
         </div>
     </div>
     
-    <div class="container-fluid mt-5 orde bg-dark p-5"
+    <div class="container-fluid mt-5 orde bg-dark p-5 pt-0 " id="ordee"
      style="background-image: url('images/vitalii-chernopyskyi-Oxb84ENcFfU-unsplash.jpg'); background-repeat: no-repeat;
      background-size: cover; height: 80vh";>
-        <h1>Order Here</h1>
-        <p>Place your order here and it will be delivered at your doorstep</p>
+        <h1 class="pt-5">Order Here!</h1>
+        <p class="pb-2" style="margin-top: -12px;">Place your order here and it will be delivered at your doorstep.</p>
         <form id="myForm" name="myForm" action ="" class="form-control p-5" onsubmit="validateForm()" >
             <div class="input-group mb-3">
                 <label class="input-group-text" for="pizza">Pizza Flavor</label>
@@ -175,15 +192,15 @@
           </div>
           <div class="col-md-3 text-justify">
             <h2>Location</h2>
-            <p>Pizza Shop</p>
+            <p>Pizza Eat Shop</p>
             <p>Two Rivers Mall | Kiambu</p>
-            <p>Box 00123-112, Kiambu </p>
+            <p>P.O Box 00123-112, Kiambu </p>
           </div>
           <div class="col-md-3">
             <h2>Customer Care</h2>
              <p>pizzashop@gmail.com</p>
-             <p>Phone: 254777777</p> 
-             <p>Phone: 254666666</p>
+             <p>Phone: +254777777</p> 
+             <p>Tel: (222) +254666666</p>
           </div>
           <div class="col-md-4">
               <div class="mapouter">
