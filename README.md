@@ -3,9 +3,9 @@
 ## Description
 Its a website that allows one to be able to access different Pizza flavours and allow him to make an order.
 ## Screenshot
-<img src="images/screenshots/s1.png" alt="home image">
-<img src="images/screenshots/s2.png" alt="aboutus image">
-<img src="images/screenshots/s3.png" alt="what we do image">
+<img src="images/s1.png" alt="home image">
+<img src="images/s2.png" alt="aboutus image">
+<img src="images/s3.png" alt="what we do image">
 <img src="images/screenshots/s4.png" alt="contact us image">
 
 
