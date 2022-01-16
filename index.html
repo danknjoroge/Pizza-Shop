@@ -24,14 +24,17 @@
     style="background-image: url('images/imag.png'); background-repeat: no-repeat;
     background-size: cover; height: 100vh";>
         <div class="container p-5">
-            <h1 class="first">Welcome To Pizza Shop. <h1>
+            <h1 class="first">Welcome To Pizza Eat Shop. <h1>
             <h1 class="p-4"> Where you order at your comfort</h1>
             <input type="button" value="Order Now">
         </div>   
     </div>
 
-    <div class="container about">
+    <div class="container-fluid about">
         <h1>About us</h1>
+        <div class="container">
+            <p>Hello</p>
+        </div>
     </div>
 
     <div class="container-fluid varieties">
@@ -91,7 +94,9 @@
         </div>
     </div>
     
-    <div class="container mt-5 orde">
+    <div class="container-fluid mt-5 orde bg-dark p-5"
+     style="background-image: url('images/vitalii-chernopyskyi-Oxb84ENcFfU-unsplash.jpg'); background-repeat: no-repeat;
+     background-size: cover; height: 80vh";>
         <h1>Order Here</h1>
         <p>Place your order here and it will be delivered at your doorstep</p>
         <form id="myForm" name="myForm" action ="" class="form-control p-5" onsubmit="validateForm()" >
@@ -136,27 +141,31 @@
               <input type="submit" id="checkout" value="Checkout">  
         </form>
     </div>
-    <div class="container" id="orders">
-        <h3>You Placed the following orders:</h3>
-        <p id="placedOrder"> </p>
-    </div>
-    <div class="container del">
-        <input type="submit" id="add" value="Add Pizza" >
-        <input type="submit" value="Want Delivery?" id="deliver">
-    </div>
-   
-    <form action="" id="deliveryForm" onsubmit="deliveryValidate() ">
-        <div class="form-group container">
-            <p>Your delivery cost is Ksh. 150</p>
-            <input type="text" id="name" class="form-control mb-3" placeholder="Name" required>
-            <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number" required>
-            <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery" required>
-            <input type="submit" id="place" class="place" value="Place Order">
+    <div class="container align pt-">
+        <div class="container" id="orders">
+            <h3>You Placed the following orders:</h3>
+            <p id="placedOrder"> </p>
         </div>
+        <div class="container del">
+            <input type="submit" value="Want Delivery?" id="deliver">
+            <input type="submit" id="add" value="Add Pizza" >
+        </div>
+       
+        <div class="container text-center-5 m-3">
+            <form action="" class="p-3" id="deliveryForm" onsubmit="deliveryValidate() ">
+                <div class="form-group container">
+                    <p>Your delivery cost is Ksh. 150</p>
+                    <input type="text" id="name" class="form-control mb-3" placeholder="Name" required>
+                    <input type="number" id="phone" class="form-control mb-3" placeholder="Pnone Number" required>
+                    <input type="text" id="location" class="form-control mb-3" placeholder="Location for delivery" required>
+                    <input type="submit" id="place" class="place" value="Place Order">
+                </div>
+        
+            </form>
+        </div>
+    </div>
 
-    </form>
-
-    <div class="container-fluid bg-dark mt-5" id="contact">
+    <div class="container-fluid bg-dark" id="contact">
         <div class="controls-top "> 
             <h2 class="text-center p-4">Contact Us</h2>
           </div>
@@ -189,8 +198,8 @@
         </div>
     
     </div>
-    <footer class="bg-dark p-5 text-center">
-        <p>copyrights &copy; 2022 Daniel Njoroge. All rights reserved</p>
+    <footer class="bg-dark p-5 text-center footer">
+        <p>Copyrights &copy; 2022 Daniel Njoroge. All rights reserved</p>
         <i class="fa fa-facebook" style="font-size:48px;"></i>
         <i class="fa fa-twitter" style="font-size:48px;"></i>
         <i class="fa fa-instagram" style="font-size:48px;"></i>

@@ -16,6 +16,7 @@ nav{
     font-weight: bold;
     color: white;
     font-size: 70px;
+    text-shadow: 3px 5px rgb(254, 80, 0);
 }
 input[type="button"]{
     color: white;
@@ -38,12 +39,14 @@ input[type="button"]{
 .card{
     width: 300px;
     border:none;
-    box-shadow: .1px 2px 5px rgb(254,80,0);
+    box-shadow: 2px 5px rgb(254,80,0);
     height: 300px;
     border-radius: 19px;
 }
 .about{
     text-align: center;
+    background-color: rgb(254,80,0);
+
 }
 .varieties{
     text-align: center;
@@ -54,14 +57,42 @@ img:hover{
 }
 .orde{
     text-align: center;
+    /* width: 855px; */
+}
+.align{
+    text-align: center;
+    width: 855px;
 }
 
 #orders{
-    display: none;
+    display:none ;
 }
 .del{
     display: none;
 }
 #deliveryForm{
     display: none;
+    width:756px;
+}
+input[type="submit"]{
+    color: white;
+    background-color: rgb(254,80,0);
+    border-radius: 7px;
+    border: none;
+    height: 45px;
+    width: 155px;
+    font-size:25px;
+    font-weight: bold;
+}
+#deliver{
+    width: 205px;
+}
+form{
+    width: 50%;
+}
+footer p {
+    color: #fff;
+}
+.fa{
+    color: #fff;
 }
