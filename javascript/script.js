@@ -30,37 +30,46 @@ Order.prototype.fullOrder = function(){
     return this.flavor + " " + this.size + " " + " with " + this.crust + " " + this.topping + " topping ";
 }
 
-function Total(price){
-    this.price = price;
+function Total(price, crustP, toppingsP) {
+    this.price= price;
+    this.crustP= crustP;
+    this.toppingsP= toppingsP;
 }
 Total.prototype.pizzaTotal= function(){
-    return this.price;
+    return this.price + this.crustP + this.toppingsP;
 }
 Total.prototype.finalTotal = function(){
-    return this.price + 150.
+    return this.price + this.crustP + this.toppingsP + 150 ;
 }
+
 var sizePrice = [400, 800, 1200];
+var toppingsPrice= [100, 150, 200];
+var crustPrice = [50, 70, 80];
 
 
 $(document).ready(function() {
     $('form#myForm').submit(function(event){
         event.preventDefault();
         var pizzaFlavor = $('#flavor').val();
+
         var pizzaSize = parseInt($('#size').val());
-        var pizzaCrust = $('#crust').val();
-        var pizzaTopping = $('#topping').val();
+        var pizzaCrust = parseInt($('#crust').val());
+        var pizzaTopping = parseInt($('#topping').val());
+
         var price = sizePrice[pizzaSize-1];
+        var crustP = crustPrice[pizzaCrust-1];
+        var toppingsP = toppingsPrice[pizzaTopping-1];
 
 
         newOrder = new Order(pizzaFlavor, pizzaSize, pizzaCrust, pizzaTopping);
-        newTotal = new Total(price);
+        newTotal = new Total(price, crustP, toppingsP);
 
-        if (pizzaSize == 1) {
-            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.pizzaTotal());
+        if (pizzaSize == 1 && pizzaTopping == 1 && pizzaCrust) {
+            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " Pizza and the Total cost is: " + newTotal.pizzaTotal());
         }else if(pizzaSize == 2) {
-            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.pizzaTotal());
+            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " Pizza and the Total cost is: " + newTotal.pizzaTotal());
         }else if(pizzaSize==3) {
-            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.pizzaTotal());
+            $("#placedOrder").html("You Ordered "  + " " + newOrder.flavor + " Pizza  and the Total cost is: " + newTotal.pizzaTotal());
         }else{
             return false;
         }
@@ -72,7 +81,7 @@ $(document).ready(function() {
 
     $('#add').click(function(e) {
         e.preventDefault();
-        $("#placedOrder").append("You Ordered " + " " + newOrder.flavor + " with " + newOrder.crust + " crust and " + newOrder.topping + " topping. " + "Total: " + newTotal.pizzaTotal());
+        $("#placedOrder").append("You Ordered " + " " + newOrder.flavor + " Pizza and the Total cost is: " + newTotal.pizzaTotal());
         document.getElementById("myForm").reset();
     })
     $('form#deliveryForm').submit(function(e) {
@@ -80,7 +89,7 @@ $(document).ready(function() {
         var name = $('#name').val();
         var phone = $('#phone').val();
         var location = $('#location').val();
-        alert("Hello, " + name + ".Your order has been received. Your Pizza will be delivered to " + location + " in the next 30 to 35 minutes maximum. And the Total Amount to pay is: KSH." + newTotal.finalTotal());
+        alert("Hello, " + name + ".Your order has been received. Your Pizza will be delivered to " + location + " in the next 30 to 35 minutes maximum. And the Total Amount delivery cost included to pay is: KSH." + newTotal.finalTotal());
         document.getElementById("myForm").reset();
 
     });
